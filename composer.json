@@ -1,0 +1,40 @@
+{
+    "name": "gilsegura/json-api-validator-bundle",
+    "description": "This is a bundle integrating the [json-api-validator](https://github.com/gilsegura/json-api-validator) library into Symfony applications.",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=8.3",
+        "beberlei/assert": "^3.3",
+        "symfony/psr-http-message-bridge": "^7.1",
+        "gilsegura/psr7-validator": "dev-main",
+        "gilsegura/serializer": "dev-main",
+        "gilsegura/json-api": "dev-main",
+        "gilsegura/json-api-validator": "dev-main",
+        "symfony/framework-bundle": "^7.1",
+        "php-http/discovery": "^1.20"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.49",
+        "phpunit/phpunit": "^10.5",
+        "phpstan/phpstan": "^1.10",
+        "rector/rector": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "JSONAPIValidatorBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JSONAPIValidatorBundle\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    }
+}
